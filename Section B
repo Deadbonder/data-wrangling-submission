@@ -1,0 +1,44 @@
+B1.
+SELECT c.city, SUM(o.amount) AS total
+FROM customer c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.city
+HAVING SUM(o.amount) > 1000
+ORDER BY total DESC, c.city;
+
+Output:
+city    | total
+--------+------
+Delhi   | 3650
+Mumbai  | 3650
+
+
+
+
+B2.
+1. a.mean(axis=0)
+   Output: [25. 35. 45.]
+
+2. Output: [30 40 50 60]
+
+
+B3.
+1. 1
+2. (5, 5)
+3. sales['units'] = sales['units'].fillna(sales['units'].median())
+
+
+B4.
+Solved in B4.py file
+
+
+B5.
+Mistake 1: 
+  Wrong:     extract >> total()
+  Corrected: total(extract())
+
+Mistake 2:
+  Wrong:     report_dag
+  Corrected: report_dag()
+
+
